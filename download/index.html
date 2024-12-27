@@ -177,6 +177,19 @@ svg.svelte-iewj14 path.svelte-iewj14{fill:var(--color-accent-2)}section.svelte-i
       .catch(e => console.error(e))
     
 
+      import('/_symbols/4fafcc29-8b4d-4cf5-b44c-f36b8366325d.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-98181d40'),
+              hydrate: true,
+              props: {"logo":{"size":"8","image":{"alt":"","url":"https://cjukcdvnlfbryybxwlec.supabase.co/storage/v1/object/public/images/204d0614-ee94-4c76-8117-f12250404e15/1732418156024amigo-lingo-logo-200w.png"}},"site_nav":[{"link":{"url":"/bout","label":"About"}},{"link":{"url":"/product","label":"Product"}},{"link":{"url":"/why","label":"Why"}},{"link":{"url":"/pricing","label":"Pricing"}}],"cta":[{"link":{"url":"/","label":"Download App"}}]}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    
+
       import('/_symbols/6f57abac-8d60-43f8-84e9-3086a6dca5d6.js')
       .then(({default:App}) => {
         
@@ -184,19 +197,6 @@ svg.svelte-iewj14 path.svelte-iewj14{fill:var(--color-accent-2)}section.svelte-i
               target: document.querySelector('#section-06f75c64'),
               hydrate: true,
               props: {"heading":"We're moving fast, signup for updates and more.","form":{"footer":"We'll send you bi-weekly emails about our new features.","placeholder":"Your Email","button_label":"Submit"},"cards":[{"icon":"mdi:user-heart","title":"User friendly & fun","description":"With a clear intuitive interface, you can easily add and view events."},{"icon":"material-symbols:speed","title":"Responsive and speedy","description":"Our desktop and web application are both super speedy."}]}
-            })
-          
-      })
-      .catch(e => console.error(e))
-    
-
-      import('/_symbols/4fafcc29-8b4d-4cf5-b44c-f36b8366325d.js')
-      .then(({default:App}) => {
-        
-            new App({
-              target: document.querySelector('#section-98181d40'),
-              hydrate: true,
-              props: {"logo":{"size":"8","image":{"url":"https://cjukcdvnlfbryybxwlec.supabase.co/storage/v1/object/public/images/204d0614-ee94-4c76-8117-f12250404e15/1732418156024amigo-lingo-logo-200w.png","alt":""}},"site_nav":[{"link":{"url":"/bout","label":"About"}},{"link":{"url":"/product","label":"Product"}},{"link":{"url":"/why","label":"Why"}},{"link":{"url":"/pricing","label":"Pricing"}}],"cta":[{"link":{"url":"/","label":"Download App"}}]}
             })
           
       })
