@@ -2903,7 +2903,7 @@ function get_each_context(ctx, list, i) {
 	return child_ctx;
 }
 
-// (86:8) {#if teaser.image.url}
+// (87:8) {#if teaser.image.url}
 function create_if_block_1(ctx) {
 	let img;
 	let img_src_value;
@@ -2921,7 +2921,7 @@ function create_if_block_1(ctx) {
 		h() {
 			if (!src_url_equal(img.src, img_src_value = /*teaser*/ ctx[5].image.url)) attr(img, "src", img_src_value);
 			attr(img, "alt", img_alt_value = /*teaser*/ ctx[5].image.alt);
-			attr(img, "class", "svelte-3pbbnz");
+			attr(img, "class", "svelte-1l56l21");
 		},
 		m(target, anchor) {
 			insert_hydration(target, img, anchor);
@@ -2941,7 +2941,7 @@ function create_if_block_1(ctx) {
 	};
 }
 
-// (92:10) {#if teaser.link.url}
+// (93:10) {#if teaser.link.url}
 function create_if_block(ctx) {
 	let a;
 	let t0_value = /*teaser*/ ctx[5].link.label + "";
@@ -2979,7 +2979,7 @@ function create_if_block(ctx) {
 		},
 		h() {
 			attr(div, "class", "arrow");
-			attr(a, "class", "link svelte-3pbbnz");
+			attr(a, "class", "link svelte-1l56l21");
 			attr(a, "href", a_href_value = /*teaser*/ ctx[5].link.url);
 		},
 		m(target, anchor) {
@@ -3013,7 +3013,7 @@ function create_if_block(ctx) {
 	};
 }
 
-// (84:4) {#each teasers as teaser}
+// (85:4) {#each teasers as teaser}
 function create_each_block(ctx) {
 	let div2;
 	let t0;
@@ -3068,10 +3068,10 @@ function create_each_block(ctx) {
 			this.h();
 		},
 		h() {
-			attr(h2, "class", "title svelte-3pbbnz");
+			attr(h2, "class", "title svelte-1l56l21");
 			attr(div0, "class", "content");
-			attr(div1, "class", "body svelte-3pbbnz");
-			attr(div2, "class", "teaser svelte-3pbbnz");
+			attr(div1, "class", "body svelte-1l56l21");
+			attr(div2, "class", "teaser svelte-1l56l21");
 		},
 		m(target, anchor) {
 			insert_hydration(target, div2, anchor);
@@ -3226,8 +3226,8 @@ function create_fragment(ctx) {
 			attr(span, "class", "superhead");
 			attr(h2, "class", "heading");
 			attr(div0, "class", "subheading");
-			attr(header, "class", "heading-group svelte-3pbbnz");
-			attr(div1, "class", "teasers svelte-3pbbnz");
+			attr(header, "class", "heading-group svelte-1l56l21");
+			attr(div1, "class", "teasers svelte-1l56l21");
 			attr(section, "class", "section-container");
 		},
 		m(target, anchor) {
