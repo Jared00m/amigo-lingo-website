@@ -1,0 +1,317 @@
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta name="generator" content="Primo" />
+      <!-- HEAD_svelte-2cy0t5_START --><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="UTF-8"><link rel="preconnect" href="https://fonts.bunny.net"><link href="https://fonts.bunny.net/css?family=lato:300,400,500,600,700|space-grotesk:300,400,500,600,700" rel="stylesheet"><link href="https://fonts.bunny.net/css?family=lato:300,400,500,600,700|open-sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i|space-grotesk:300,400,500,600,700" rel="stylesheet"><link rel="icon" type="image/png" sizes="32x32" href="https://cjukcdvnlfbryybxwlec.supabase.co/storage/v1/object/public/images/204d0614-ee94-4c76-8117-f12250404e15/1733641919245amigo-lingo-icon-120.png"><style>/* Reset & standardize default styles */
+@import url("https://unpkg.com/@primo-app/primo@1.3.64/reset.css") layer;
+
+/* Design tokens (apply to components) */
+:root {
+  --color-tint: #f8fbff;
+
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "Open Sans", sans-serif;
+
+  /* Colors */
+  --color-base: #183b56;
+  --color-brand: #FFD419;
+  --color-accent: orange;
+  --color-accent-2: #FFD419;
+  --color-light: blue;
+  --color-shade: purple;
+  --color-inverted: black;
+  --color-tint: #e5eaf4;
+
+  /* Base values */
+  --color: var(--color-base);
+  --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
+  --border-radius: 8px;
+  --border-color: #eee;
+  --background: white;
+}
+
+/* Root element (use instead of `body`) */
+#page {
+  font-family: var(--font-body);
+  color: var(--color-base);
+  line-height: 1.2;
+  font-size: 1.125rem;
+  background: var(--background);
+}
+
+.section.has-content {
+  display: flex;
+  justify-content: center;
+  padding: 5rem 2rem;
+}
+
+.section.has-content .content {
+    max-width: 800px;
+    width: 100%;
+  }
+
+.section-container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+.heading-group {
+  display: grid;
+  gap: 1rem;
+  place-content: center;
+  text-align: center;
+}
+
+.heading-group .superhead {
+    font-family: var(--font-body);
+    color: var(--color-accent);
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+.heading-group .subheading {
+    color: #4f6373;
+    line-height: 1.4;
+    max-width: 600px;
+    font-weight: 400;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+.heading {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  line-height: 1.1;
+  font-weight: 500;
+  max-width: 600px;
+}
+
+.button {
+  color: var(--color-brand, white);
+  background: var(--color-inverted);
+  border: 2px solid var(--color-brand);
+  border-radius: 6px;
+  padding: 8px 20px;
+  transition: 0.1s background, 0.1s color;
+}
+
+.button:hover {
+    color: var(--color-inverted);
+    background: var(--color-brand);
+    border-color: var(--color-inverted);
+  }
+
+.button.inverted {
+    background: var(--color-white);
+    color: var(--color-brand);
+    border-color: #0d2436;
+  }
+
+.link {
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: var(--color-brand);
+}
+
+.link .arrow {
+    transition: transform 0.1s;
+  }
+
+.link:hover .arrow {
+    transform: translateX(4px);
+  }
+</style><!-- HEAD_svelte-2cy0t5_END -->
+      <style>@import url("https://unpkg.com/modern-normalize@1.1.0/modern-normalize.css");header.svelte-1xoo4p7.svelte-1xoo4p7.svelte-1xoo4p7{border-bottom:1px solid var(--border-color);background-color:var(--color-brand)}.section-container.svelte-1xoo4p7.svelte-1xoo4p7.svelte-1xoo4p7{display:flex;justify-content:space-between;align-items:center;padding-top:0.75rem;padding-bottom:0.75rem}.desktop-nav.svelte-1xoo4p7.svelte-1xoo4p7.svelte-1xoo4p7{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;width:100%}.desktop-nav.svelte-1xoo4p7 .logo.svelte-1xoo4p7.svelte-1xoo4p7{font-size:1.5rem;font-weight:600;line-height:1.4;margin-right:1.5rem;width:var(--size)}.desktop-nav.svelte-1xoo4p7 nav.svelte-1xoo4p7.svelte-1xoo4p7{display:flex;align-items:center;gap:1.5rem}.desktop-nav.svelte-1xoo4p7 nav.svelte-1xoo4p7 a.svelte-1xoo4p7{font-size:1rem;font-weight:400;display:none}.desktop-nav.svelte-1xoo4p7 nav a.nav-item.svelte-1xoo4p7.svelte-1xoo4p7{border-bottom:2px solid transparent;transition:border-color 0.1s}.desktop-nav.svelte-1xoo4p7 nav a.nav-item.svelte-1xoo4p7.svelte-1xoo4p7:hover{border-color:var(--color-brand)}.desktop-nav.svelte-1xoo4p7 button#open.svelte-1xoo4p7.svelte-1xoo4p7{font-size:1.5rem;margin-left:auto}nav#mobile-nav.svelte-1xoo4p7.svelte-1xoo4p7.svelte-1xoo4p7{position:absolute;flex-direction:column;text-align:center;background-color:var(--background-color, white);box-shadow:var(--box-shadow);border-radius:var(--border-radius);left:0.5rem;top:0.5rem;right:0.5rem;padding:2rem;z-index:2}nav#mobile-nav.svelte-1xoo4p7 a.svelte-1xoo4p7.svelte-1xoo4p7{display:block}nav#mobile-nav.svelte-1xoo4p7 hr.svelte-1xoo4p7.svelte-1xoo4p7{width:100%}nav#mobile-nav.svelte-1xoo4p7 .button.svelte-1xoo4p7.svelte-1xoo4p7{width:100%;justify-content:center}nav#mobile-nav.svelte-1xoo4p7 button#close.svelte-1xoo4p7.svelte-1xoo4p7{display:block;position:absolute;right:1rem;top:1rem;font-size:1.5rem}@media(min-width: 600px){#open.svelte-1xoo4p7.svelte-1xoo4p7.svelte-1xoo4p7,#mobile-nav.svelte-1xoo4p7.svelte-1xoo4p7.svelte-1xoo4p7{display:none}.desktop-nav.svelte-1xoo4p7 nav.svelte-1xoo4p7 a.svelte-1xoo4p7{display:inline-block}}
+.section-container.svelte-mmkbzj{max-width:var(--inner-max-width,800px);padding:4rem 2rem}.content.svelte-mmkbzj img{width:100%;margin:2rem 0;box-shadow:var(--box-shadow);border-radius:var(--border-radius)}.content.svelte-mmkbzj p{padding:0.25rem 0;line-height:1.5;font-family:var(--body-font);font-weight:400;margin-bottom:1rem;color:#2d3339}.content.svelte-mmkbzj a{text-decoration:underline}.content.svelte-mmkbzj h1{font-size:clamp(1.75rem, 10vw, 2.25rem);font-weight:600;letter-spacing:-0.08rem;margin-bottom:1rem;line-height:1.1}.content.svelte-mmkbzj h2{font-size:clamp(1.5rem, 10vw, 2.125rem);font-weight:600;margin-top:1rem;margin-bottom:1rem;letter-spacing:-0.06rem;line-height:1.1}.content.svelte-mmkbzj h3{font-size:clamp(1.25rem, 10vw, 1.75rem);font-weight:600;margin-bottom:1rem;letter-spacing:-0.05rem;line-height:1.1}.content.svelte-mmkbzj ul{list-style:disc;padding:0.25rem 0;padding-left:1.25rem}.content.svelte-mmkbzj ol{list-style:decimal;padding-left:1.25rem;margin-bottom:2rem}.content.svelte-mmkbzj blockquote{padding:2rem;box-shadow:var(--box-shadow);border-radius:var(--border-radius)}.content.svelte-mmkbzj li{padding-bottom:1rem}
+svg.svelte-iewj14 path.svelte-iewj14{fill:var(--color-accent-2)}section.svelte-iewj14.svelte-iewj14{background:var(--color-accent-2)}.section-container.svelte-iewj14.svelte-iewj14{display:grid;gap:3rem;padding-top:1rem}@media(min-width: 900px){.section-container.svelte-iewj14.svelte-iewj14{gap:7rem;grid-template-columns:1fr 1fr
+}}.signup.svelte-iewj14.svelte-iewj14{color:var(--color-inverted);display:grid;gap:1rem;place-content:start}.signup.svelte-iewj14 form.svelte-iewj14{display:flex;gap:.5rem}.signup.svelte-iewj14 form input.svelte-iewj14{color:var(--color-base)}.signup.svelte-iewj14 form input.svelte-iewj14,.signup.svelte-iewj14 form button.svelte-iewj14{font-size:1rem;padding:0.75rem 1rem;border-radius:calc(var(--border-radius) / 2)}.signup.svelte-iewj14 form button.svelte-iewj14{background:var(--color-brand);font-size:1.125rem;font-weight:500;padding:0.5rem 1.5rem}.signup.svelte-iewj14 .footer.svelte-iewj14{opacity:0.7;font-size:0.875rem;line-height:1.75}.cards.svelte-iewj14.svelte-iewj14{display:grid;gap:1rem}.cards.svelte-iewj14 .card.svelte-iewj14{display:grid;grid-template-columns:3rem auto;-moz-column-gap:1.5rem;column-gap:1.5rem;row-gap:0.5rem;padding:1.5rem;background:var(--background);border-radius:var(--border-radius)}.cards.svelte-iewj14 .card .icon.svelte-iewj14{color:var(--color-brand);padding:0.25rem;font-size:3rem;grid-row:span 2}.cards.svelte-iewj14 .card .title.svelte-iewj14{font-weight:600;font-size:1.125rem;line-height:1.5}.cards.svelte-iewj14 .card .description.svelte-iewj14{opacity:0.7;font-size:1rem}</style>
+    </head>
+    <body id="page">
+       
+<div class="section" id="section-6468f358"><header class="svelte-1xoo4p7"><div class="section-container svelte-1xoo4p7"><div class="desktop-nav svelte-1xoo4p7"><a href="/" class="logo svelte-1xoo4p7" style="--size: 8rem;"><img src="https://cjukcdvnlfbryybxwlec.supabase.co/storage/v1/object/public/images/204d0614-ee94-4c76-8117-f12250404e15/1732418156024amigo-lingo-logo-200w.png" alt=""></a>
+      <nav class="svelte-1xoo4p7"><a class="nav-item svelte-1xoo4p7" href="/bout">About</a><a class="nav-item svelte-1xoo4p7" href="/product">Product</a><a class="nav-item svelte-1xoo4p7" href="/why">Why</a><a class="nav-item svelte-1xoo4p7" href="/pricing">Pricing</a>
+        <a class="button svelte-1xoo4p7" href="/">Download App</a>
+        <button id="open" aria-label="Open mobile navigation" class="svelte-1xoo4p7"></button></nav></div>
+    </div></header></div> 
+<div class="section" id="section-55260b3e"><div class="section"><div class="section-container content svelte-mmkbzj"><!-- HTML_TAG_START --><h1 id="amigolingoprivacypolicy">Amigo Lingo Privacy Policy</h1>
+<p><strong>Effective Date:</strong> (Month Day, Year)</p>
+<p>Thank you for choosing Amigo Lingo (“we,” “us,” or “our”). This Privacy Policy explains how we collect, use, disclose, and protect your personal information when you use our language learning mobile application (“App”) and related services (collectively, the “Services”). By using Amigo Lingo, you agree to the terms of this Privacy Policy.</p>
+<hr />
+<h2 id="1whoweare">1. Who We Are</h2>
+<ul>
+<li><strong>App Name:</strong> Amigo Lingo  </li>
+<li><strong>Contact Email:</strong> <a href="mailto:jaredmitcham@gmail.com">jaredmitcham@gmail.com</a>  </li>
+<li><strong>Contact Address:</strong> Avenida Jorge Vanderghen 306, Departamento 2A, Miraflores, Peru  </li>
+</ul>
+<p>We are a small, one-person operation, and any privacy inquiries you send to our email address will come directly to our attention.</p>
+<hr />
+<h2 id="2datawecollect">2. Data We Collect</h2>
+<h3 id="21personalinformationyouprovide">2.1 Personal Information You Provide</h3>
+<ul>
+<li><strong>Account Details:</strong> When you create an account, we collect your email address, first name, gender, date of birth, and the languages you speak (native and target).  </li>
+<li><strong>Profile Picture (Optional):</strong> You may upload a profile picture, but this is not required.  </li>
+<li><strong>Conversations:</strong> Your text conversations with our AI language partner are stored in our database (Firebase Firestore) for analysis and functionality purposes.</li>
+</ul>
+<h3 id="22automaticallycollectedinformation">2.2 Automatically Collected Information</h3>
+<ul>
+<li><strong>Analytics & Usage Data:</strong> We use tools such as <strong>Google Analytics</strong> and <strong>Google Mobile Ads</strong> to collect information about how you interact with the App. This may include the type of device you use, access times, pages viewed, and features interacted with.  </li>
+<li><strong>IP Address & Approximate Location:</strong> If available, we may capture your general location (e.g., city or country level) for analytics and marketing purposes. We do <strong>not</strong> currently collect precise GPS data.</li>
+</ul>
+<h3 id="23subscriptionpaymentinformation">2.3 Subscription &amp; Payment Information</h3>
+<ul>
+<li>All subscription purchases for Amigo Lingo occur via the <strong>Apple App Store</strong> or <strong>Google Play Store</strong>. We receive notifications about your subscription status (active, renewed, canceled) but we <strong>do not</strong> collect or store any payment card details.</li>
+</ul>
+<h3 id="24datafromthirdparties">2.4 Data from Third Parties</h3>
+<ul>
+<li><strong>OpenAI (AI Conversations):</strong> When you chat with our AI partner, the messages you send are processed via <strong>OpenAI’s</strong> API. We encourage you to review OpenAI’s own privacy policy to understand how they handle data transmitted via their API.  </li>
+<li><strong>Facebook Pixel (Website):</strong> On our website, we may use the Facebook Pixel for advertising and analytics. We also may create lookalike audiences on Facebook using hashed email addresses.</li>
+</ul>
+<hr />
+<h2 id="3childrensprivacy">3. Children’s Privacy</h2>
+<h3 id="31notintendedforchildrenunder13">3.1 Not Intended for Children Under 13</h3>
+<ul>
+<li>We do <strong>not</strong> knowingly allow children under the age of 13 to create accounts. If our system detects a birthdate indicating that a user is 13 or under, the registration process will be blocked.</li>
+<li>If you believe we have inadvertently collected information from a child under 13, please contact us so we can delete the information promptly.</li>
+</ul>
+<h3 id="32usersunder16inotherjurisdictions">3.2 Users Under 16 in Other Jurisdictions</h3>
+<ul>
+<li>If you are under the age of 16 (or the age of majority in your jurisdiction), you must have parental or guardian consent to use Amigo Lingo. We rely on you to provide accurate information regarding your date of birth.</li>
+</ul>
+<hr />
+<h2 id="4howweuseyourdata">4. How We Use Your Data</h2>
+<h3 id="41providingandimprovingtheservice">4.1 Providing and Improving the Service</h3>
+<p>We use your personal data (e.g., account details, conversation logs) to operate, maintain, and enhance the core language learning functionality of Amigo Lingo.</p>
+<h3 id="42analyticsandmarketing">4.2 Analytics and Marketing</h3>
+<ul>
+<li><strong>Analytics:</strong> We use Google Analytics, Google Mobile Ads, and other tools to understand how users interact with the App, identify popular or underused features, and make improvements.  </li>
+<li><strong>Marketing and Advertising:</strong></li>
+<li>We may use your email address to create lookalike audiences on Facebook or send you marketing emails (e.g., if you canceled your subscription or did not complete a purchase).</li>
+<li>We do <strong>not</strong> sell your personal information to third parties.</li>
+</ul>
+<h3 id="43legalcomplianceandprotection">4.3 Legal Compliance and Protection</h3>
+<p>We may disclose user data if required to do so by law or in response to a valid request by governmental authorities, or to protect our rights, privacy, safety, or property.</p>
+<hr />
+<h2 id="5legalbasesforprocessingeueeausers">5. Legal Bases for Processing (EU/EEA Users)</h2>
+<p>If you are located in the European Union or European Economic Area, we process your personal information based on one or more of the following legal bases:</p>
+<ul>
+<li><strong>Consent:</strong> By creating an account and using our App, you consent to our processing of your personal data as described in this policy.  </li>
+<li><strong>Contract:</strong> The processing is necessary for the performance of a contract—to provide you with language-learning services.  </li>
+<li><strong>Legitimate Interests:</strong> We may process certain data (e.g., basic analytics) for our legitimate interests, provided those interests are not overridden by your data-protection rights.</li>
+</ul>
+<hr />
+<h2 id="6internationaldatatransfers">6. International Data Transfers</h2>
+<ul>
+<li><strong>Data Hosting in the United States:</strong> Amigo Lingo stores and processes data on servers located in the United States. If you use the App from outside the U.S., your information may be transferred across international borders.</li>
+<li><strong>By Using the App:</strong> You consent to the transfer of your personal data to the U.S. and any other jurisdictions in which we or our service providers operate.</li>
+</ul>
+<hr />
+<h2 id="7cookiesandtrackingtechnologies">7. Cookies and Tracking Technologies</h2>
+<ul>
+<li><strong>Website Cookies:</strong> On our website, we may use cookies or similar technologies (like the Facebook Pixel) to analyze site traffic and serve advertisements. You may configure your browser settings to block or manage cookies.  </li>
+<li><strong>App Tracking:</strong> In our mobile application, certain analytics and ad-serving functionalities may use unique identifiers. Currently, we do not provide an in-app opt-out, but you can modify your device settings to limit ad tracking if desired.</li>
+</ul>
+<hr />
+<h2 id="8dataretention">8. Data Retention</h2>
+<ul>
+<li><strong>Indefinite Retention:</strong> We generally retain your personal data (including your account details and AI conversation logs) <strong>indefinitely</strong> unless you request deletion.  </li>
+<li><strong>Deletion Requests:</strong> If you wish to have your data removed, please email us at <a href="mailto:jaredmitcham@gmail.com">jaredmitcham@gmail.com</a>. We will make reasonable efforts to delete your data promptly but cannot guarantee a specific timeframe. Be aware that deleting your data may affect your access to the App.</li>
+</ul>
+<hr />
+<h2 id="9securitymeasures">9. Security Measures</h2>
+<h3 id="91measuresinplace">9.1 Measures in Place</h3>
+<ul>
+<li>We rely on <strong>Google Firebase Firestore</strong> and <strong>OpenAI</strong> to manage and store data in secure environments. Data is transmitted via SSL (Secure Socket Layer) encryption.</li>
+<li>We implement standard security measures to protect against unauthorized access or misuse.</li>
+</ul>
+<h3 id="92noabsoluteguarantee">9.2 No Absolute Guarantee</h3>
+<ul>
+<li>While we strive to protect your information, <strong>no</strong> method of transmission or storage is 100% secure. We disclaim liability for breaches that occur outside our reasonable control (e.g., if a third party’s systems are compromised).</li>
+</ul>
+<hr />
+<h2 id="10userrightsandchoices">10. User Rights and Choices</h2>
+<h3 id="101accessupdateorcorrectyourdata">10.1 Access, Update, or Correct Your Data</h3>
+<ul>
+<li>You can update your email address, name, date of birth, or gender in the App’s user settings. If you have trouble, contact us at <a href="mailto:jaredmitcham@gmail.com">jaredmitcham@gmail.com</a>.</li>
+</ul>
+<h3 id="102accountdeletion">10.2 Account Deletion</h3>
+<ul>
+<li>You may request that we delete your account and personal data by emailing us. We will make reasonable efforts to remove your data from our servers, subject to any legal obligations.</li>
+</ul>
+<h3 id="103cookiestracking">10.3 Cookies &amp; Tracking</h3>
+<ul>
+<li>On our website, you can manage cookie preferences through your browser settings or our cookie pop-up. We do not currently respond to “Do Not Track” signals.</li>
+</ul>
+<hr />
+<h2 id="11thirdpartyservices">11. Third-Party Services</h2>
+<ul>
+<li><strong>OpenAI:</strong> AI conversation processing. Refer to <a href="https://openai.com/policies/privacy-policy">OpenAI’s Privacy Policy</a> for details on how they handle conversation data.  </li>
+<li><strong>Google Services:</strong> Firebase Firestore, Google Analytics, and Google Mobile Ads.  </li>
+<li><strong>Facebook Pixel:</strong> Used on our website for advertising and audience creation.</li>
+</ul>
+<p>We share personal data with these third-party providers only to the extent necessary to perform our Services. Each provider has its own privacy practices.</p>
+<hr />
+<h2 id="12changestothisprivacypolicy">12. Changes to This Privacy Policy</h2>
+<ul>
+<li>We may update this Privacy Policy from time to time as new features or services are added or as laws change. The updated policy will be posted on our website and/or in the App.</li>
+<li><strong>Effective Date:</strong> The “Effective Date” at the top indicates when the latest changes became operational. By continuing to use the App after any changes take effect, you agree to the revised policy.</li>
+</ul>
+<hr />
+<h2 id="13contactus">13. Contact Us</h2>
+<p>If you have questions, concerns, or complaints regarding this Privacy Policy or our data practices, please reach out to us:</p>
+<ul>
+<li><strong>Email:</strong> <a href="mailto:jaredmitcham@gmail.com">jaredmitcham@gmail.com</a></li>
+<li><strong>Mailing Address:</strong><br />
+Amigo Lingo<br />
+Avenida Jorge Vanderghen 306,<br />
+Departamento 2A,<br />
+Miraflores, Peru  </li>
+</ul>
+<p>We appreciate your feedback and will do our best to address any concerns promptly.</p>
+<hr />
+<p><strong>Thank you for using Amigo Lingo!</strong></p>
+<p>We value your trust and are committed to safeguarding your privacy. If you have further questions or suggestions, please don’t hesitate to contact us.</p><!-- HTML_TAG_END --></div></div></div> 
+<div class="section" id="section-3505d1b5"><svg viewBox="0 0 1440 175" fill="none" xmlns="http://www.w3.org/2000/svg" class="svelte-iewj14"><path fill-rule="evenodd" clip-rule="evenodd" d="M1440 175H0V0C240 53.3333 480 80 720 80C960 80 1200 53.3333 1440 0V175Z" class="svelte-iewj14"></path></svg>
+<section class="svelte-iewj14"><div class="section-container svelte-iewj14"><div class="signup svelte-iewj14"><h2 class="heading">We're moving fast, signup for updates and more.</h2>
+      <form action="" class="svelte-iewj14"><input type="email" placeholder="Your Email" class="svelte-iewj14">
+        <button type="button" class="svelte-iewj14">Submit</button></form>
+      <span class="footer svelte-iewj14">We'll send you bi-weekly emails about our new features.</span></div>
+    <div class="cards svelte-iewj14"><div class="card svelte-iewj14"><div class="icon svelte-iewj14"></div>
+          <span class="title svelte-iewj14">User friendly &amp; fun</span>
+          <span class="description svelte-iewj14">With a clear intuitive interface, you can easily add and view events.</span>
+        </div><div class="card svelte-iewj14"><div class="icon svelte-iewj14"></div>
+          <span class="title svelte-iewj14">Responsive and speedy</span>
+          <span class="description svelte-iewj14">Our desktop and web application are both super speedy.</span>
+        </div></div></div></section></div> 
+
+      <script type="module">
+      import('/_symbols/4fafcc29-8b4d-4cf5-b44c-f36b8366325d.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-6468f358'),
+              hydrate: true,
+              props: {"logo":{"size":"8","image":{"alt":"","url":"https://cjukcdvnlfbryybxwlec.supabase.co/storage/v1/object/public/images/204d0614-ee94-4c76-8117-f12250404e15/1732418156024amigo-lingo-logo-200w.png"}},"site_nav":[{"link":{"url":"/bout","label":"About"}},{"link":{"url":"/product","label":"Product"}},{"link":{"url":"/why","label":"Why"}},{"link":{"url":"/pricing","label":"Pricing"}}],"cta":[{"link":{"url":"/","label":"Download App"}}]}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    
+
+      import('/_symbols/6f57abac-8d60-43f8-84e9-3086a6dca5d6.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-3505d1b5'),
+              hydrate: true,
+              props: {"heading":"We're moving fast, signup for updates and more.","form":{"footer":"We'll send you bi-weekly emails about our new features.","placeholder":"Your Email","button_label":"Submit"},"cards":[{"icon":"mdi:user-heart","title":"User friendly & fun","description":"With a clear intuitive interface, you can easily add and view events."},{"icon":"material-symbols:speed","title":"Responsive and speedy","description":"Our desktop and web application are both super speedy."}]}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    </script>
+    </body>
+  </html>
+  
