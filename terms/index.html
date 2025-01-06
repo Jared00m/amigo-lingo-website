@@ -1,0 +1,246 @@
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta name="generator" content="Primo" />
+      <!-- HEAD_svelte-2cy0t5_START --><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="UTF-8"><link rel="preconnect" href="https://fonts.bunny.net"><link href="https://fonts.bunny.net/css?family=lato:300,400,500,600,700|space-grotesk:300,400,500,600,700" rel="stylesheet"><link href="https://fonts.bunny.net/css?family=lato:300,400,500,600,700|open-sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i|space-grotesk:300,400,500,600,700" rel="stylesheet"><link rel="icon" type="image/png" sizes="32x32" href="https://cjukcdvnlfbryybxwlec.supabase.co/storage/v1/object/public/images/204d0614-ee94-4c76-8117-f12250404e15/1733641919245amigo-lingo-icon-120.png"><style>/* Reset & standardize default styles */
+@import url("https://unpkg.com/@primo-app/primo@1.3.64/reset.css") layer;
+
+/* Design tokens (apply to components) */
+:root {
+  --color-tint: #f8fbff;
+
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "Open Sans", sans-serif;
+
+  /* Colors */
+  --color-base: #183b56;
+  --color-brand: #FFD419;
+  --color-accent: orange;
+  --color-accent-2: #FFD419;
+  --color-light: blue;
+  --color-shade: purple;
+  --color-inverted: black;
+  --color-tint: #e5eaf4;
+
+  /* Base values */
+  --color: var(--color-base);
+  --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
+  --border-radius: 8px;
+  --border-color: #eee;
+  --background: white;
+}
+
+/* Root element (use instead of `body`) */
+#page {
+  font-family: var(--font-body);
+  color: var(--color-base);
+  line-height: 1.2;
+  font-size: 1.125rem;
+  background: var(--background);
+}
+
+.section.has-content {
+  display: flex;
+  justify-content: center;
+  padding: 5rem 2rem;
+}
+
+.section.has-content .content {
+    max-width: 800px;
+    width: 100%;
+  }
+
+.section-container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+.heading-group {
+  display: grid;
+  gap: 1rem;
+  place-content: center;
+  text-align: center;
+}
+
+.heading-group .superhead {
+    font-family: var(--font-body);
+    color: var(--color-accent);
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+.heading-group .subheading {
+    color: #4f6373;
+    line-height: 1.4;
+    max-width: 600px;
+    font-weight: 400;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+.heading {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  line-height: 1.1;
+  font-weight: 500;
+  max-width: 600px;
+}
+
+.button {
+  color: var(--color-brand, white);
+  background: var(--color-inverted);
+  border: 2px solid var(--color-brand);
+  border-radius: 6px;
+  padding: 8px 20px;
+  transition: 0.1s background, 0.1s color;
+}
+
+.button:hover {
+    color: var(--color-inverted);
+    background: var(--color-brand);
+    border-color: var(--color-inverted);
+  }
+
+.button.inverted {
+    background: var(--color-white);
+    color: var(--color-brand);
+    border-color: #0d2436;
+  }
+
+.link {
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: var(--color-brand);
+}
+
+.link .arrow {
+    transition: transform 0.1s;
+  }
+
+.link:hover .arrow {
+    transform: translateX(4px);
+  }
+</style><!-- HEAD_svelte-2cy0t5_END -->
+      <style>@import url("https://unpkg.com/modern-normalize@1.1.0/modern-normalize.css");header.svelte-1xoo4p7.svelte-1xoo4p7.svelte-1xoo4p7{border-bottom:1px solid var(--border-color);background-color:var(--color-brand)}.section-container.svelte-1xoo4p7.svelte-1xoo4p7.svelte-1xoo4p7{display:flex;justify-content:space-between;align-items:center;padding-top:0.75rem;padding-bottom:0.75rem}.desktop-nav.svelte-1xoo4p7.svelte-1xoo4p7.svelte-1xoo4p7{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;width:100%}.desktop-nav.svelte-1xoo4p7 .logo.svelte-1xoo4p7.svelte-1xoo4p7{font-size:1.5rem;font-weight:600;line-height:1.4;margin-right:1.5rem;width:var(--size)}.desktop-nav.svelte-1xoo4p7 nav.svelte-1xoo4p7.svelte-1xoo4p7{display:flex;align-items:center;gap:1.5rem}.desktop-nav.svelte-1xoo4p7 nav.svelte-1xoo4p7 a.svelte-1xoo4p7{font-size:1rem;font-weight:400;display:none}.desktop-nav.svelte-1xoo4p7 nav a.nav-item.svelte-1xoo4p7.svelte-1xoo4p7{border-bottom:2px solid transparent;transition:border-color 0.1s}.desktop-nav.svelte-1xoo4p7 nav a.nav-item.svelte-1xoo4p7.svelte-1xoo4p7:hover{border-color:var(--color-brand)}.desktop-nav.svelte-1xoo4p7 button#open.svelte-1xoo4p7.svelte-1xoo4p7{font-size:1.5rem;margin-left:auto}nav#mobile-nav.svelte-1xoo4p7.svelte-1xoo4p7.svelte-1xoo4p7{position:absolute;flex-direction:column;text-align:center;background-color:var(--background-color, white);box-shadow:var(--box-shadow);border-radius:var(--border-radius);left:0.5rem;top:0.5rem;right:0.5rem;padding:2rem;z-index:2}nav#mobile-nav.svelte-1xoo4p7 a.svelte-1xoo4p7.svelte-1xoo4p7{display:block}nav#mobile-nav.svelte-1xoo4p7 hr.svelte-1xoo4p7.svelte-1xoo4p7{width:100%}nav#mobile-nav.svelte-1xoo4p7 .button.svelte-1xoo4p7.svelte-1xoo4p7{width:100%;justify-content:center}nav#mobile-nav.svelte-1xoo4p7 button#close.svelte-1xoo4p7.svelte-1xoo4p7{display:block;position:absolute;right:1rem;top:1rem;font-size:1.5rem}@media(min-width: 600px){#open.svelte-1xoo4p7.svelte-1xoo4p7.svelte-1xoo4p7,#mobile-nav.svelte-1xoo4p7.svelte-1xoo4p7.svelte-1xoo4p7{display:none}.desktop-nav.svelte-1xoo4p7 nav.svelte-1xoo4p7 a.svelte-1xoo4p7{display:inline-block}}
+.section-container.svelte-17s6g5k{max-width:var(--inner-max-width,800px);padding:4rem 2rem}.content.svelte-17s6g5k img{width:100%;margin:2rem 0;box-shadow:var(--box-shadow);border-radius:var(--border-radius)}.content.svelte-17s6g5k p{padding:0.25rem 0;line-height:1.5;font-family:var(--body-font);font-weight:400;margin-bottom:1rem;color:#2d3339}.content.svelte-17s6g5k a{text-decoration:underline}.content.svelte-17s6g5k h1{font-size:clamp(1.75rem, 10vw, 2.25rem);font-weight:600;letter-spacing:-0.08rem;margin-bottom:1rem;line-height:1.1}.content.svelte-17s6g5k h2{font-size:clamp(1.5rem, 10vw, 2.125rem);font-weight:600;margin-top:1rem;margin-bottom:1rem;letter-spacing:-0.06rem;line-height:1.1}.content.svelte-17s6g5k h3{font-size:clamp(1.25rem, 10vw, 1.75rem);font-weight:600;margin-bottom:1rem;letter-spacing:-0.05rem;line-height:1.1}.content.svelte-17s6g5k ul{list-style:disc;padding-left:2.25rem}.content.svelte-17s6g5k ol{list-style:decimal;padding-left:1.25rem;margin-bottom:0rem}.content.svelte-17s6g5k blockquote{padding:2rem;box-shadow:var(--box-shadow);border-radius:var(--border-radius)}.content.svelte-17s6g5k li{padding-bottom:1rem}.content.svelte-17s6g5k hr{margin-bottom:2rem;margin-top:2rem}
+svg.svelte-yp7u88 path.svelte-yp7u88{fill:var(--color-accent-2)}footer.svelte-yp7u88.svelte-yp7u88{background:var(--color-accent-2);color:black}.section-container.svelte-yp7u88.svelte-yp7u88{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4rem}.content.svelte-yp7u88.svelte-yp7u88{margin:initial;padding:0;line-height:1.1;color:black}.nav-items.svelte-yp7u88.svelte-yp7u88{display:flex;flex-wrap:wrap;gap:4rem}.nav-items.svelte-yp7u88 ul.svelte-yp7u88{display:grid;gap:0.5rem}.nav-items.svelte-yp7u88 ul .link.svelte-yp7u88{color:black;border-bottom:2px solid black}.nav-items.svelte-yp7u88 ul .link.svelte-yp7u88:hover{border-color:transparent}.nav-items.svelte-yp7u88 h3.svelte-yp7u88{font-weight:500;font-size:1.5rem;margin-bottom:1rem}</style>
+    </head>
+    <body id="page">
+       
+<div class="section" id="section-3a37510b"><header class="svelte-1xoo4p7"><div class="section-container svelte-1xoo4p7"><div class="desktop-nav svelte-1xoo4p7"><a href="/" class="logo svelte-1xoo4p7" style="--size: 8rem;"><img src="https://cjukcdvnlfbryybxwlec.supabase.co/storage/v1/object/public/images/204d0614-ee94-4c76-8117-f12250404e15/1732418156024amigo-lingo-logo-200w.png" alt=""></a>
+      <nav class="svelte-1xoo4p7"><a class="nav-item svelte-1xoo4p7" href="/bout">About</a><a class="nav-item svelte-1xoo4p7" href="/product">Product</a><a class="nav-item svelte-1xoo4p7" href="/why">Why</a><a class="nav-item svelte-1xoo4p7" href="/pricing">Pricing</a>
+        <a class="button svelte-1xoo4p7" href="/">Download App</a>
+        <button id="open" aria-label="Open mobile navigation" class="svelte-1xoo4p7"></button></nav></div>
+    </div></header></div> 
+<div class="section" id="section-20c2f90f"><div class="section"><div class="section-container content svelte-17s6g5k"><!-- HTML_TAG_START --><h1 id="amigolingotermsofservice">Amigo Lingo – Terms of Service</h1>
+<p><strong>Effective Date: [January 1, 2025]</strong></p>
+<p>Welcome to Amigo Lingo (“we,” “us,” “our”). By downloading, accessing, or using the Amigo Lingo mobile application (“App”) and related services (collectively, the “Services”), you agree to be bound by these Terms of Service (“Terms”). If you do not agree, do not use or access the Services.</p>
+<hr />
+<h2 id="1eligibility">1. Eligibility</h2>
+<ol>
+<li><strong>Age Requirement</strong>: You must be at least 13 years old to create an account. If you are under the age of majority in your jurisdiction (e.g., under 16 in some EU countries), you may only use the Services under the supervision of a parent or guardian.</li>
+<li><strong>Blocked Registrations</strong>: If our system detects that a user’s provided date of birth is 13 or under, we will block the registration process.</li>
+</ol>
+<hr />
+<h2 id="2accountsandsecurity">2. Accounts and Security</h2>
+<ol>
+<li><strong>Registration</strong>: To access certain features, you must register an account by providing accurate personal information. You are responsible for maintaining the confidentiality of your login credentials.</li>
+<li><strong>Unauthorized Use</strong>: You agree to immediately notify us at <a href="mailto:jaredmitcham@gmail.com">jaredmitcham@gmail.com</a> of any suspected unauthorized use of your account.</li>
+</ol>
+<hr />
+<h2 id="3subscriptionsandpayments">3. Subscriptions and Payments</h2>
+<ol>
+<li><strong>App Store Payments</strong>: All subscription purchases occur through the Apple App Store or Google Play Store. We do not handle or store payment details directly.</li>
+<li><strong>Billing Cycle</strong>: Subscriptions may be billed on a recurring basis (monthly or yearly). You can manage or cancel your subscription through your App Store or Play Store account settings.</li>
+<li><strong>Refunds</strong>: Any refund requests must be handled through Apple or Google, as per their respective policies.</li>
+</ol>
+<hr />
+<h2 id="4licenseandrestrictions">4. License and Restrictions</h2>
+<ol>
+<li><strong>Limited License</strong>: We grant you a personal, non-transferable, non-exclusive, revocable license to use the App for your own language-learning purposes.</li>
+<li><strong>Prohibited Uses</strong>: You agree not to:</li>
+</ol>
+<ul>
+<li>Reverse engineer, modify, or create derivative works of the App.</li>
+<li>Use the Services for any illegal or unauthorized purpose.</li>
+<li>Interfere with or disrupt the Services or servers.</li>
+</ul>
+<hr />
+<h2 id="5userconduct">5. User Conduct</h2>
+<ol>
+<li><strong>Responsibility</strong>: You are solely responsible for all activities under your account.</li>
+<li><strong>Prohibited Content</strong>: You must not transmit content that is unlawful, threatening, abusive, defamatory, obscene, or otherwise objectionable.</li>
+</ol>
+<hr />
+<h2 id="6intellectualproperty">6. Intellectual Property</h2>
+<ol>
+<li><strong>Ownership</strong>: All content, trademarks, and software related to Amigo Lingo are owned by or licensed to us. Unauthorized use of our intellectual property is prohibited.</li>
+<li><strong>AI Conversations</strong>: AI-generated responses and transcripts may be stored for analysis and performance improvement. Refer to our <a href="https://www.amigo-lingo.com/privacy/">Privacy Policy</a> for details on data handling.</li>
+</ol>
+<hr />
+<h2 id="7disclaimerofwarranties">7. Disclaimer of Warranties</h2>
+<ol>
+<li><strong>As Is</strong>: The Services are provided “as is” and “as available” without warranty of any kind.</li>
+<li><strong>No Guarantee</strong>: We do not guarantee that the Services will be error-free, secure, or uninterrupted.</li>
+</ol>
+<hr />
+<h2 id="8limitationofliability">8. Limitation of Liability</h2>
+<p>To the fullest extent permitted by law, we shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from or relating to your use of the Services. Our total liability to you for any damages shall not exceed the amount paid by you (if any) for accessing the Services during the twelve (12) months immediately preceding the event giving rise to such liability.</p>
+<hr />
+<h2 id="9termination">9. Termination</h2>
+<ol>
+<li><strong>By You</strong>: You may discontinue use or request account deletion at any time.</li>
+<li><strong>By Us</strong>: We reserve the right to suspend or terminate your account if you violate these Terms or engage in fraudulent activity.</li>
+<li><strong>Effect of Termination</strong>: Upon termination, provisions that by their nature should survive (e.g., disclaimers, limitations of liability) shall remain in effect.</li>
+</ol>
+<hr />
+<h2 id="10governinglawdisputeresolution">10. Governing Law &amp; Dispute Resolution</h2>
+<ol>
+<li><strong>Governing Law</strong>: These Terms are governed by the laws of the State of Georgia, USA, without regard to conflict-of-law principles.</li>
+<li><strong>Dispute Resolution</strong>: Any disputes arising under or related to these Terms shall be resolved in the state or federal courts located in Georgia, and you consent to the personal jurisdiction of such courts.</li>
+</ol>
+<hr />
+<h2 id="11changestotheterms">11. Changes to the Terms</h2>
+<p>We may modify these Terms from time to time. If we make material changes, we will notify you (e.g., via email or an in-app alert). By continuing to use the Services after the updated Terms go into effect, you agree to be bound by the revised Terms.</p>
+<hr />
+<h2 id="12contactus">12. Contact Us</h2>
+<p>If you have any questions about these Terms, please contact us at:</p>
+<p><strong>Email</strong>: <a href="mailto:jaredmitcham@gmail.com">jaredmitcham@gmail.com</a><br />
+<strong>Address</strong>:<br />
+Amigo Lingo<br />
+Avenida Jorge Vanderghen 306, Departamento 2A<br />
+Miraflores, Peru</p>
+<p><strong>Thank you for using Amigo Lingo!</strong></p><!-- HTML_TAG_END --></div></div></div> 
+<div class="section" id="section-8f9ddffc"><svg viewBox="0 0 1440 175" fill="none" xmlns="http://www.w3.org/2000/svg" class="svelte-yp7u88"><path fill-rule="evenodd" clip-rule="evenodd" d="M1440 175H0V0C240 53.3333 480 80 720 80C960 80 1200 53.3333 1440 0V175Z" class="svelte-yp7u88"></path></svg>
+<footer class="svelte-yp7u88"><div class="section-container svelte-yp7u88"><div class="content svelte-yp7u88"><!-- HTML_TAG_START --><h3 id="amigolingobr">Amigo Lingo <br></h3>
+<p>Avenida Jorge Vanderghen 306,
+Lima, Peru</p><!-- HTML_TAG_END --></div>
+    <div class="nav-items svelte-yp7u88"><nav><h3 class="title svelte-yp7u88">Legal</h3>
+          <ul class="svelte-yp7u88"><li><a class="link svelte-yp7u88" href="/privacy">Privacy</a>
+              </li><li><a class="link svelte-yp7u88" href="/">Terms</a>
+              </li></ul>
+        </nav><nav><h3 class="title svelte-yp7u88">About Us</h3>
+          <ul class="svelte-yp7u88"><li><a class="link svelte-yp7u88" href="/about">About</a>
+              </li><li><a class="link svelte-yp7u88" href="/download">Download</a>
+              </li></ul>
+        </nav></div></div></footer></div> 
+
+      <script type="module">
+      import('/_symbols/4fafcc29-8b4d-4cf5-b44c-f36b8366325d.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-3a37510b'),
+              hydrate: true,
+              props: {"logo":{"size":"8","image":{"alt":"","url":"https://cjukcdvnlfbryybxwlec.supabase.co/storage/v1/object/public/images/204d0614-ee94-4c76-8117-f12250404e15/1732418156024amigo-lingo-logo-200w.png"}},"site_nav":[{"link":{"url":"/bout","label":"About"}},{"link":{"url":"/product","label":"Product"}},{"link":{"url":"/why","label":"Why"}},{"link":{"url":"/pricing","label":"Pricing"}}],"cta":[{"link":{"url":"/","label":"Download App"}}]}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    </script>
+    </body>
+  </html>
+  
